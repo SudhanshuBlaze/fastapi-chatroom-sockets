@@ -1,4 +1,7 @@
-for Backend
+## Setup and Run locally
+
+### for server
+
 Install the dependencies
 
 ```bash
@@ -11,7 +14,7 @@ Run the backend server
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-for Frontend
+### for client
 
 Install the dependencies
 
@@ -23,4 +26,26 @@ Start the server
 
 ```bash
 npm start
+```
+
+### Build & run the docker image
+
+- for backend
+
+```bash
+docker build -t server .
+```
+
+```bash
+docker run -d -p 8000:8000 server
+```
+
+- for client
+
+```bash
+docker build -t client .
+```
+
+```bash
+docker run -d -p 3000:3000 client
 ```
